@@ -1,0 +1,53 @@
+.Girl
+{
+position: absolute;
+width: 350px;
+height: 534px;
+left: 752px;
+top: 123px;
+}
+.TextBox
+{
+position: absolute;
+width: 856px;
+height: 382px;
+left: 168px;
+top: 177px;
+
+background: #FEE7DC;
+}
+.Text
+{
+    position: absolute;
+left: 5%;
+right: 10%;
+top: 25%;
+bottom: 40.17%;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 36px;
+
+color: #000000;
+}
+.Started
+{
+    position: absolute;
+width: 138px;
+height: 36px;
+left: 348px;
+top: 457px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 850;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}

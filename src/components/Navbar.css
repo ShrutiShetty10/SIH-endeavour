@@ -1,0 +1,88 @@
+.AppLogo
+{
+position: absolute;
+width: 74px;
+height: 74px;
+margin-left:30px;
+margin-top:20px;
+}
+.Endeavour
+{
+position: absolute;
+width: 202px;
+height: 28px;
+left: 130px;
+top: 53px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 27px;
+
+color: #000000;
+
+}
+.NavbarInfo
+{
+    position: absolute;
+width: 540px;
+height: 21px;
+left: 443px;
+top: calc(50% - 21px/2 - 292.5px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+.grants
+{
+position: absolute;
+width: 540px;
+height: 21px;
+left: 580px;
+top: calc(50% - 21px/2 - 292.5px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+.ButtonReg
+{
+position: absolute;
+width: 100px;
+height: 39px;
+left: 835px;
+top: 46px;
+
+border-color: 1px solid #4D4A4A;
+box-sizing: border-box;
+border-radius: 4px;
+}
+
+.ButtonSign
+{
+position: absolute;
+width: 100px;
+height: 39px;
+left: 935px;
+top: 46px;
+
+border-color: 1px solid #4D4A4A;
+box-sizing: border-box;
+border-radius: 15px;
+}
