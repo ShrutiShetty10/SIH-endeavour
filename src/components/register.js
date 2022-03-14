@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
-
+import {useState} from 'react';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -16,14 +16,32 @@ import  Logo from '../assets/scholarship.png';
 const theme = createTheme();
 
 export default function Register() {
+  const [User,setUser]=useState({
+    firstName:'',
+    lastName:'',
+    age:0,
+    education:'',
+    country:'',
+    email:'',
+    password:''
+
+  });
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const data = event.currentTarget;
     console.log({
+      firstName:data.get('firstName'),
+      lastName:data.get('lastName'),
+      age:data.get('age'),
+      education:data.get('education'),
+      country:data.get('country'),
       email: data.get('email'),
       password: data.get('password'),
     });
   };
+
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -55,17 +73,59 @@ export default function Register() {
                   label="First Name"
                   color="warning"
                   autoFocus
+                  
+                  onChange={handleSubmit}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  required
+                  
                   fullWidth
                   id="lastName"
                   label="Last Name"
                   name="lastName"
                   autoComplete="family-name"
                   color="warning"
+                  
+                  onChange={handleSubmit}
+                />
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                <TextField
+                  required
+                  fullWidth
+                  id="age"
+                  label="Age"
+                  name="age"
+                  autoComplete="family-name"
+                  color="warning"
+                  onChange={handleSubmit}
+                />
+              </Grid>
+              <Grid item xs={12} sm={9}>
+                <TextField
+                  required
+                  fullWidth
+                  id="Level of Education"
+                  label="Level of Education"
+                  name="Level of Education"
+                  autoComplete="family-name"
+                  color="warning"
+                  value={User.education}
+                  onChange={handleSubmit}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="Country"
+                  label="Country"
+                  name="country"
+                  autoComplete="Country"
+                  color="warning"
+                  value={User.country}
+                  onChange={handleSubmit}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -77,8 +137,11 @@ export default function Register() {
                   name="email"
                   autoComplete="email"
                   color="warning"
+                  value={User.email}
+                  onChange={handleSubmit}
                 />
               </Grid>
+              
               <Grid item xs={12}>
                 <TextField
                   required
@@ -86,9 +149,12 @@ export default function Register() {
                   name="password"
                   label="Password"
                   type="password"
+                  
                   id="password"
                   autoComplete="new-password"
                   color="warning"
+                  value={User.password}
+                  onChange={handleSubmit}
                 />
               </Grid>
               
@@ -99,12 +165,13 @@ export default function Register() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
               color="warning"
+              onClick={handleSubmit}
             >
               Register
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/signin" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>

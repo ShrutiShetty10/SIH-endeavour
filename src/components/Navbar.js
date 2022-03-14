@@ -4,13 +4,7 @@ import './Navbar.css';
 import  Logo from '../assets/scholarship.png';
 import Button from '@mui/material/Button';
 export default function Navbar() {
-    let navigate=useNavigate()();
-    function handleRegister()
-    {
-        
-      navigate.push('/register');
-      
-    }
+    
 
   return (
    
